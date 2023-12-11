@@ -21,6 +21,17 @@ def find_appointment_by_time(day,time):
             return matching_object
     else:
         return None # If a match is not found return None
+    
+def show_appointment_by_name (name):
+    target_name = name.lower() # makes string lower case 
+    found_appointments = False
+    for obj in calender:
+        if obj.get_client_name().lower().find(target_name) != -1:
+            print(obj.__str__())
+            found_appointments = True
+        
+    if not found_appointments:
+            print('No appointments found.')
 
 
 
@@ -67,3 +78,52 @@ def print_menu():
             save_scheduled_appointments()
         else:
             print ("Invalid input")
+
+
+
+
+def schedule_appointments():
+    print('** Schedule an appointment**')
+    day = input("What Day:")
+    hour = int(input('Enter start hour(24 hour clock):'))
+    obj = find_appointment_by_time(day.lower(),hour)
+    if obj == None:
+        print('Sorry that time slot is not in the weekly Calender!')
+    elif obj.get_client_name() != "":
+        print ('Sorry that time slot is booked already!')
+    else:
+        client_name_schedule = input('Client name:')
+        client_phone_schedule = input('Client Phone:')
+        print('Appointment Types \n1:Mens Cut 50$, 2:ladies Cut $80, 3:Mens Colouring $50, 4:Ladies Colouring $120')
+        apointment_type_schedule = int(input('Type of Appointment:'))
+        if apointment_type_schedule == 0: 
+            obj.schedule(client_name_schedule,client_phone_schedule,apointment_type_schedule) # If statment is to ensure proper appointment type is selected, and integer value is input.
+            print(f'OK, {client_name_schedule}\'s appointment is scheduled!')
+        elif apointment_type_schedule == 1:
+            obj.schedule(client_name_schedule,client_phone_schedule,apointment_type_schedule)
+            print(f'OK, {client_name_schedule}\'s appointment is scheduled!')
+        elif apointment_type_schedule == 2:
+            obj.schedule(client_name_schedule,client_phone_schedule,apointment_type_schedule)
+            print(f'OK, {client_name_schedule}\'s appointment is scheduled!')
+        elif apointment_type_schedule == 3:
+            obj.schedule(client_name_schedule,client_phone_schedule,apointment_type_schedule)
+            print(f'OK, {client_name_schedule}\'s appointment is scheduled!')
+        elif apointment_type_schedule == 4:
+            obj.schedule(client_name_schedule,client_phone_schedule,apointment_type_schedule)
+            print(f'OK, {client_name_schedule}\'s appointment is scheduled!')
+        else:
+            print ("Sorry that is not a valid appointment Type!")
+    print_menu()
+
+
+def main ():
+    print('Starting the Appointment Manager System')
+    create_weekly_calender()
+    print('Weekly calendar created')
+    menu_load_CSV = input('Would you like to load previouly scheduled appointments from a file (Y/N)?').lower()
+    if menu_load_CSV == "y":
+        load_scheduled_appointments()
+
+    print_menu()
+
+main()
