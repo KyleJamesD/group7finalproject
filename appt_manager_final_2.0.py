@@ -1,11 +1,26 @@
+from appointment import Appointment
 
+calender= []
 
+def create_weekly_calender():  
+    working_days = ["monday","tuesday","wednesday","thursday","friday","saturday"]
+    working_hours = [9,10,11,12,13,14,15,16]
+    for day in working_days: # for each day make an object with each hour from the hour list
+        for hour in working_hours: # for each hour make an object with appintment class pass day and hour as Arguments
+            obj = Appointment(day, hour)
+            calender.append(obj) # append each object to one big list. Makes 48 Objects
 
-
-
-
-
-
+def find_appointment_by_time(day,time):
+    target_day = day
+    target_time = time
+    matching_object = None
+    # Search for a matching object
+    for obj in calender: # if object day attribute and time attribute are true - return that object
+        if obj.get_day_of_week() == target_day and obj.get_start_time_hour() == target_time:
+            matching_object = obj
+            return matching_object
+    else:
+        return None # If a match is not found return None
 
 
 
