@@ -1,0 +1,147 @@
+PS C:\Users\kyled\OneDrive\School - Semester 1\Object Oreintated Programming 1 - CPRG 216\Group 7 Projects\Group 7 - 4th Assignment - Classes\Project Classes (Group) attached files Nov 23, 2023 1131 AM> & C:/Users/kyled/AppData/Local/Microsoft/WindowsApps/python3.11.exe "c:/Users/kyled/OneDrive/School - Semester 1/Object Oreintated Programming 1 - CPRG 216/Group 7 Projects/Group 7 - 4th Assignment - Classes/Project Classes (Group) attached files Nov 23, 2023 1131 AM/appt_manager_functions working on.py"
+Starting the Appointment Manager System
+Weekly calendar created
+Would you like to load previouly scheduled appointments from a file (Y/N)?y
+Enter Appointment filename:appointments.csv
+File not found. Re-enter appointment filename:appointments1.csv
+3 previously scheduled apointments have been loaded
+
+
+Jojo's Hair Salon Appointment Manager
+=====================================
+1) Schedule an appointment
+2) Find appointment by name
+3) Print Calendar for a specific day
+4) Cancel an appointment 
+9) Exit the system
+Enter your selection:1
+
+** Schedule an appointment**
+What Day:Thursday
+Enter start hour(24 hour clock):11
+Client name:Steven
+Client Phone:403-600-6000
+Appointment Types 
+1:Mens Cut 50$, 2:ladies Cut $80, 3:Mens Colouring $50, 4:Ladies Colouring $120
+Type of Appointment:1
+OK, Steven's appointment is scheduled!
+
+
+Jojo's Hair Salon Appointment Manager
+=====================================
+1) Schedule an appointment
+2) Find appointment by name
+3) Print Calendar for a specific day
+4) Cancel an appointment 
+9) Exit the system
+Enter your selection:3
+
+**Print calender for a specific day **
+Enter Day of the week:Toosday
+Appointments for Toosday
+
+Client Name         Phone          Day       Start     End       Type
+-------------------------------------------------------------------------------------
+
+
+Jojo's Hair Salon Appointment Manager
+=====================================
+1) Schedule an appointment
+2) Find appointment by name
+3) Print Calendar for a specific day
+4) Cancel an appointment 
+9) Exit the system
+Enter your selection:3
+
+**Print calender for a specific day **
+Enter Day of the week:tuesday
+Appointments for Tuesday
+
+Client Name         Phone          Day       Start     End       Type
+-------------------------------------------------------------------------------------
+                                   Tuesday    9:00  -  10:00     Availible
+                                   Tuesday   10:00  -  11:00     Availible
+                                   Tuesday   11:00  -  12:00     Availible
+                                   Tuesday   12:00  -  13:00     Availible
+                                   Tuesday   13:00  -  14:00     Availible
+                                   Tuesday   14:00  -  15:00     Availible
+                                   Tuesday   15:00  -  16:00     Availible
+                                   Tuesday   16:00  -  17:00     Availible
+
+
+Jojo's Hair Salon Appointment Manager
+=====================================
+1) Schedule an appointment
+2) Find appointment by name
+3) Print Calendar for a specific day
+4) Cancel an appointment
+9) Exit the system
+Enter your selection:3
+
+**Print calender for a specific day **
+Enter Day of the week:Thursday
+Appointments for Thursday
+
+Client Name         Phone          Day       Start     End       Type
+-------------------------------------------------------------------------------------
+                                   Thursday   9:00  -  10:00     Availible
+                                   Thursday  10:00  -  11:00     Availible
+Steven              403-600-6000   Thursday  11:00  -  12:00     Mens Cut
+                                   Thursday  12:00  -  13:00     Availible
+Gabriela            368-111-9999   Thursday  13:00  -  14:00     Ladies Colouring
+                                   Thursday  14:00  -  15:00     Availible
+                                   Thursday  15:00  -  16:00     Availible
+                                   Thursday  16:00  -  17:00     Availible
+
+
+Jojo's Hair Salon Appointment Manager
+=====================================
+1) Schedule an appointment
+2) Find appointment by name
+3) Print Calendar for a specific day
+4) Cancel an appointment
+9) Exit the system
+Enter your selection:2
+
+** Find appointment by name **
+Enter Client Name:ste
+Appointments for ste
+Client Name         Phone          Day       Start     End       Type
+-------------------------------------------------------------------------------------
+Steven              403-600-6000   Thursday  11:00  -  12:00     Mens Cut
+Stephanie           368-999-1111   Saturday  10:00  -  11:00     Ladies Cut
+
+
+Jojo's Hair Salon Appointment Manager
+=====================================
+1) Schedule an appointment
+2) Find appointment by name
+3) Print Calendar for a specific day
+4) Cancel an appointment
+9) Exit the system
+Enter your selection:4
+
+**Cancel an appointment **
+What day:saturday
+Enter start hour (24 hour clock):10
+Appointment: saturday 10:00 - 11:00 for Stephanie has been cancelled!
+
+
+
+Jojo's Hair Salon Appointment Manager
+=====================================
+1) Schedule an appointment
+2) Find appointment by name
+3) Print Calendar for a specific day
+4) Cancel an appointment
+9) Exit the system
+Enter your selection:9
+
+** Exit the system **
+Would you like to save all scheduled appointments to a file (Y/N)?Y
+Enter Appointment filename:appointments1.csv
+This file already exists. Do you want to overwrite it (Y/N)?N
+Enter Appointment filename:appointments2.csv
+3 scheduled appointments have been successfully saved
+Good Bye!
+PS C:\Users\kyled\OneDrive\School - Semester 1\Object Oreintated Programming 1 - CPRG 216\Group 7 Projects\Group 7 - 4th Assignment - Classes\Project Classes (Group) attached files Nov 23, 2023 1131 AM> 
