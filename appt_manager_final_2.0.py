@@ -26,7 +26,7 @@ def show_appointment_by_name (name):
     target_name = name.lower() # makes string lower case 
     found_appointments = False
     for obj in calender:
-        if obj.get_client_name().lower().find(target_name) != -1:
+        if  target_name in obj.get_client_name().lower():
             print(obj.__str__())
             found_appointments = True
         
