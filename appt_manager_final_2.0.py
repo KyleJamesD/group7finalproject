@@ -58,14 +58,14 @@ def print_menu():
             print('** Find appointment by name **')
             name_option = input('Enter Client Name:')
             print(f'Appointments for {name_option}')
-            print ("Client Name         Phone          Day       Start     End       Type")# top menu bar for Calender will display on toosday
+            print ("Client Name         Phone          Day       Start     End       Type")# top menu bar for Calender will display on any day
             print ("-------------------------------------------------------------------------------------")
             show_appointment_by_name(name_option)
         elif menu_option == '3':
             print('**Print calender for a specific day **')
             day = input('Enter Day of the week:')
             print(f'Appointments for {day.capitalize()}\n')
-            print ("Client Name         Phone          Day       Start     End       Type")# top menu bar for Calender will display on toosday
+            print ("Client Name         Phone          Day       Start     End       Type")# top menu bar for Calender will display on any day 
             print ("-------------------------------------------------------------------------------------")
             show_appointments_by_day(day.lower())
         elif menu_option == '4':
@@ -105,7 +105,7 @@ def load_scheduled_appointments():
                         obj.schedule(client_name,(client_number),int(client_Atype)) # calls the schedule method and passes arguments to change objects attributes in calender list
                         apointments_loaded += 1
                         c=0
-            except FileNotFoundError: # if file name is mispelled or file is not their will raise an error.
+            except FileNotFoundError: # if file name is mispelled or file is not their will raise an error and execute following code block
                 csv_filename=input(f"File not found. Re-enter appointment filename:")
         print(f'{apointments_loaded} previously scheduled apointments have been loaded')
 
@@ -129,8 +129,8 @@ def save_scheduled_appointments():
                             write_string = obj.format_record()
                             csvfile.write(write_string)
                             appointments_saved += 1
-                    csvfile.close() # might need to tab back
-                    print(f'{appointments_saved} scheduled appointments have been successfully saved') # might need to tab this back
+                    csvfile.close() 
+                    print(f'{appointments_saved} scheduled appointments have been successfully saved') 
                 elif overwrite_file.lower() == "n":
                     csv_filename=input('Enter Appointment filename:')
                     open(csv_filename, 'w').close()
@@ -208,5 +208,5 @@ def main ():
 
     print_menu()
 
-if __name__ == "__main__":
+if __name__ == "__main__":#starts the program
     main()
